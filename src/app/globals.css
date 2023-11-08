@@ -1,0 +1,33 @@
+:root {
+	/* TODO convert to oklch */
+
+	/* original 24-pack */
+	--color-red: #e51027;
+	--color-scarlet: #fa3035;
+	--color-red-orange: #e62b29;
+	--color-orange: #f67727;
+	--color-yellow-orange: #eb8325;
+	--color-yellow: #dfb612;
+	--color-green-yellow: #d7ba20;
+	--color-yellow-green: #8cae33;
+	--color-green: #24813a;
+	--color-blue-green: #0070aa;
+	--color-cerulean: #0063be;
+	--color-blue: #0052b1;
+	--color-bluetiful: #003370;
+	--color-indigo: #063385;
+	--color-blue-violet: #112369;
+	--color-violet: #602f76;
+	--color-red-violet: #9c0048;
+	--color-violet-red: #f21b4f;
+
+	/* replacements for proposed 24-pack */
+	--color-bittersweet: #fa4839;
+	--color-banana-mania: #eba324;
+	--color-granny-smith: #7baa75;
+	--color-jungle-green: #11847c;
+	--color-robins-egg: #007d9a;
+	--color-royal-purple: #452871;
+	--color-plum: #672162;
+	--color-wild-strawberry: #e80037;
+}

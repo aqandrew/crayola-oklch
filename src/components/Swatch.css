@@ -1,0 +1,13 @@
+.Swatch {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+
+	&::before {
+		content: '';
+		width: 2rem;
+		aspect-ratio: 1;
+		outline: 1px solid black;
+		background-color: var(--color-swatch);
+	}
+}
