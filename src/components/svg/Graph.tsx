@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
-import { Color } from '@/utils/colors';
+import { ColorName } from '@/utils/colors';
 import AxisX from './AxisX';
 import AxisY from './AxisY';
 import SwatchDot from './SwatchDot';
@@ -9,7 +9,7 @@ import SwatchDot from './SwatchDot';
 interface GraphProps {
 	width?: number;
 	height?: number;
-	colors: Color[];
+	colors: ColorName[];
 }
 
 const containerSize = '400px';

@@ -1,7 +1,7 @@
-import { Color, getCSSVariable } from '@/utils/colors';
+import { ColorName, getCSSVariable } from '@/utils/colors';
 
 interface SwatchProps {
-	color: Color;
+	color: ColorName;
 	cx?: number;
 	cy?: number;
 }

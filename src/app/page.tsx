@@ -3,7 +3,12 @@
 
 import { Global, css } from '@emotion/react';
 
-import { COLORS, COLORS_ORIGINAL, COLORS_PROPOSED } from '@/utils/colors';
+import {
+	COLORS,
+	COLORS_ORIGINAL,
+	COLORS_PROPOSED,
+	getOKLCH,
+} from '@/utils/colors';
 import Graph from '@/components/svg/Graph';
 import Swatch from '@/components/Swatch';
 
@@ -15,7 +20,7 @@ export default function Home() {
 					':root': Object.entries(COLORS).reduce(
 						(styles, [colorName, color]) => ({
 							...styles,
-							['--color-' + colorName]: color,
+							['--color-' + colorName]: getOKLCH(color),
 						}),
 						{}
 					),

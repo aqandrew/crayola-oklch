@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
-import { Color, getCSSVariable } from '@/utils/colors';
+import { ColorName, getCSSVariable } from '@/utils/colors';
 
 interface SwatchProps {
-	color: Color;
+	color: ColorName;
 }
 
 export default function Swatch({ color }: SwatchProps) {
