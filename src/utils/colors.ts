@@ -1,5 +1,5 @@
 // hex codes sampled from here with Digital Color Meter
-// https://www.instagram.com/reel/CxviX3QrBgY/?hl=en
+// https://www.tiktok.com/@color.nerd/video/7283917703314771242?lang=en
 // oklch values obtained from https://oklch.com/
 
 export const COLORS = {
