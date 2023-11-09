@@ -1,8 +1,9 @@
+/** @jsxImportSource @emotion/react */
 'use client';
 
-import { Global } from '@emotion/react';
+import { Global, css } from '@emotion/react';
 
-import { COLORS } from '@/utils/colors';
+import { COLORS, COLORS_ORIGINAL, COLORS_PROPOSED } from '@/utils/colors';
 import Swatch from '@/components/Swatch';
 
 export default function Home() {
@@ -21,11 +22,23 @@ export default function Home() {
 			/>
 
 			<main>
-				<h1>hello</h1>
+				<h1>Crayola Hues</h1>
 
-				{Object.keys(COLORS).map((color) => (
-					<Swatch color={color} key={color} />
-				))}
+				<div css={css({ display: 'flex' })}>
+					<div>
+						<h2>Original</h2>
+						{Object.keys(COLORS_ORIGINAL).map((color) => (
+							<Swatch color={color} key={color} />
+						))}
+					</div>
+
+					<div>
+						<h2>Proposed</h2>
+						{Object.keys(COLORS_PROPOSED).map((color) => (
+							<Swatch color={color} key={color} />
+						))}
+					</div>
+				</div>
 			</main>
 		</>
 	);
