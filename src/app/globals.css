@@ -1,33 +1,87 @@
-:root {
-	/* TODO convert to oklch */
+/* hex codes sampled from here with Digital Color Meter */
+/* https://www.instagram.com/reel/CxviX3QrBgY/?hl=en */
+/* oklch values obtained from https://oklch.com/ */
 
+:root {
 	/* original 24-pack */
-	--color-red: #e51027;
-	--color-scarlet: #fa3035;
-	--color-red-orange: #e62b29;
-	--color-orange: #f67727;
-	--color-yellow-orange: #eb8325;
-	--color-yellow: #dfb612;
-	--color-green-yellow: #d7ba20;
-	--color-yellow-green: #8cae33;
-	--color-green: #24813a;
-	--color-blue-green: #0070aa;
-	--color-cerulean: #0063be;
-	--color-blue: #0052b1;
-	--color-bluetiful: #003370;
-	--color-indigo: #063385;
-	--color-blue-violet: #112369;
-	--color-violet: #602f76;
-	--color-red-violet: #9c0048;
-	--color-violet-red: #f21b4f;
+
+	/* #e51027 */
+	--color-red: oklch(58.43% 0.232 25.43);
+
+	/* #fa3035 */
+	--color-scarlet: oklch(63.84% 0.234 26.09);
+
+	/* #e62b29 */
+	--color-red-orange: oklch(59.85% 0.221 27.53);
+
+	/* #f67727 */
+	--color-orange: oklch(70.72% 0.178 47.71);
+
+	/* #eb8325 */
+	--color-yellow-orange: oklch(71.07% 0.161 56.38);
+
+	/* #dfb612 */
+	--color-yellow: oklch(79% 0.159 92.08);
+
+	/* #d7ba20 */
+	--color-green-yellow: oklch(79.07% 0.156 97.19);
+
+	/* #8cae33 */
+	--color-yellow-green: oklch(70.2% 0.152 123.8);
+
+	/* #24813a */
+	--color-green: oklch(53.28% 0.137 147.52);
+
+	/* #0070aa */
+	--color-blue-green: oklch(52.23% 0.12382028137144023 241.9488014959934);
+
+	/* #0063be */
+	--color-cerulean: oklch(50.49% 0.16262266110737159 254.35290114509638);
+
+	/* #0052b1 */
+	--color-blue: oklch(45.71% 0.166 257.59);
+
+	/* #003370 */
+	--color-bluetiful: oklch(33.17% 0.11694152904668356 256.8281093396693);
+
+	/* #063385 */
+	--color-indigo: oklch(35.22% 0.145 261.46);
+
+	/* #112369 */
+	--color-blue-violet: oklch(29.43% 0.124 266.93);
+
+	/* #602f76 */
+	--color-violet: oklch(40.26% 0.124 314.09);
+
+	/* #9c0048 */
+	--color-red-violet: oklch(44.59% 0.179 4.32);
+
+	/* #f21b4f */
+	--color-violet-red: oklch(61.7% 0.237 16.95);
 
 	/* replacements for proposed 24-pack */
-	--color-bittersweet: #fa4839;
-	--color-banana-mania: #eba324;
-	--color-granny-smith: #7baa75;
-	--color-jungle-green: #11847c;
-	--color-robins-egg: #007d9a;
-	--color-royal-purple: #452871;
-	--color-plum: #672162;
-	--color-wild-strawberry: #e80037;
+
+	/* #fa4839 */
+	--color-bittersweet: oklch(65.76% 0.217 29.1);
+
+	/* #eba324 */
+	--color-banana-mania: oklch(76.68% 0.153 75.07);
+
+	/* #7baa75 */
+	--color-granny-smith: oklch(69.04% 0.091 141.75);
+
+	/* #11847c */
+	--color-jungle-green: oklch(55.4% 0.093 187.2);
+
+	/* #007d9a */
+	--color-robins-egg: oklch(54.64% 0.10062293895614662 221.56836171458156);
+
+	/* #452871 */
+	--color-royal-purple: oklch(35.44% 0.121 298.29);
+
+	/* #672162 */
+	--color-plum: oklch(38.17% 0.13 330.74);
+
+	/* #e80037 */
+	--color-wild-strawberry: oklch(58.82% 0.23674007941731795 21.429836265688046);
 }
