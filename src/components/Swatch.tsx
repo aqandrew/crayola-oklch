@@ -12,7 +12,7 @@ export default function Swatch({ color }: SwatchProps) {
 				{ '--color-swatch': `var(--color-${color})` } as React.CSSProperties
 			}
 		>
-			<figcaption>{color}</figcaption>
+			<figcaption>{color.replace('-', ' ')}</figcaption>
 		</figure>
 	);
 }
