@@ -27,21 +27,21 @@ export default function Home() {
 
 				<div css={css({ display: 'flex', gap: '1rem' })}>
 					<div>
-						<Graph />
+						<Graph colors={COLORS_ORIGINAL} />
 
 						<h2>Original</h2>
 
-						{Object.keys(COLORS_ORIGINAL).map((color) => (
+						{COLORS_ORIGINAL.map((color) => (
 							<Swatch color={color} key={color} />
 						))}
 					</div>
 
 					<div>
-						<Graph />
+						<Graph colors={COLORS_PROPOSED} />
 
 						<h2>Proposed</h2>
 
-						{Object.keys(COLORS_PROPOSED).map((color) => (
+						{COLORS_PROPOSED.map((color) => (
 							<Swatch color={color} key={color} />
 						))}
 					</div>

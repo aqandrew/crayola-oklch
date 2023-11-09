@@ -1,16 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
+import { Color, getCSSVariable } from '@/utils/colors';
+
 interface SwatchProps {
-	color: string;
+	color: Color;
 }
 
 export default function Swatch({ color }: SwatchProps) {
 	return (
 		<figure
-			style={
-				{ '--color-swatch': `var(--color-${color})` } as React.CSSProperties
-			}
+			style={{ '--color-swatch': getCSSVariable(color) } as React.CSSProperties}
 			css={css({
 				display: 'flex',
 				gap: '1rem',

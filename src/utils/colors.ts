@@ -2,11 +2,35 @@
 // https://www.tiktok.com/@color.nerd/video/7283917703314771242?lang=en
 // oklch values obtained from https://oklch.com/
 
-type ColorAssortment = {
-	[colorName: string]: string;
-};
+export type Color =
+	| 'red'
+	| 'scarlet'
+	| 'red-orange'
+	| 'orange'
+	| 'yellow-orange'
+	| 'yellow'
+	| 'green-yellow'
+	| 'yellow-green'
+	| 'green'
+	| 'blue-green'
+	| 'cerulean'
+	| 'blue'
+	| 'bluetiful'
+	| 'indigo'
+	| 'blue-violet'
+	| 'violet'
+	| 'red-violet'
+	| 'violet-red'
+	| 'wild-strawberry'
+	| 'bittersweet'
+	| 'banana-mania'
+	| 'granny-smith'
+	| 'jungle-green'
+	| 'robins-egg'
+	| 'royal-purple'
+	| 'plum';
 
-export const COLORS: ColorAssortment = {
+export const COLORS: { [K in Color]: string } = {
 	// original 24-pack
 	red: 'oklch(58.43% 0.232 25.43)', // #e51027
 	scarlet: 'oklch(63.84% 0.234 26.09)', // #fa3035
@@ -38,29 +62,29 @@ export const COLORS: ColorAssortment = {
 	plum: 'oklch(38.17% 0.13 330.74)', // #672162
 };
 
-export const COLORS_ORIGINAL: ColorAssortment = Object.fromEntries(
-	Object.entries(COLORS).slice(0, 18)
-);
+export const COLORS_ORIGINAL = (Object.keys(COLORS) as Color[]).slice(0, 18);
 
-export const COLORS_PROPOSED: ColorAssortment = Object.fromEntries(
-	[
-		'wild-strawberry',
-		'red',
-		'bittersweet',
-		'orange',
-		'banana-mania',
-		'yellow',
-		'yellow-green',
-		'granny-smith',
-		'green',
-		'jungle-green',
-		'robins-egg',
-		'blue-green',
-		'blue',
-		'bluetiful',
-		'indigo',
-		'royal-purple',
-		'plum',
-		'red-violet',
-	].map((colorName) => [colorName, COLORS[colorName]])
-);
+export const COLORS_PROPOSED: Color[] = [
+	'wild-strawberry',
+	'red',
+	'bittersweet',
+	'orange',
+	'banana-mania',
+	'yellow',
+	'yellow-green',
+	'granny-smith',
+	'green',
+	'jungle-green',
+	'robins-egg',
+	'blue-green',
+	'blue',
+	'bluetiful',
+	'indigo',
+	'royal-purple',
+	'plum',
+	'red-violet',
+];
+
+export function getCSSVariable(color: Color) {
+	return `var(--color-${color})`;
+}
