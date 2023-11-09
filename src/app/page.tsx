@@ -4,6 +4,7 @@
 import { Global, css } from '@emotion/react';
 
 import { COLORS, COLORS_ORIGINAL, COLORS_PROPOSED } from '@/utils/colors';
+import Graph from '@/components/svg/Graph';
 import Swatch from '@/components/Swatch';
 
 export default function Home() {
@@ -24,16 +25,22 @@ export default function Home() {
 			<main>
 				<h1>Crayola Hues</h1>
 
-				<div css={css({ display: 'flex' })}>
+				<div css={css({ display: 'flex', gap: '1rem' })}>
 					<div>
+						<Graph />
+
 						<h2>Original</h2>
+
 						{Object.keys(COLORS_ORIGINAL).map((color) => (
 							<Swatch color={color} key={color} />
 						))}
 					</div>
 
 					<div>
+						<Graph />
+
 						<h2>Proposed</h2>
+
 						{Object.keys(COLORS_PROPOSED).map((color) => (
 							<Swatch color={color} key={color} />
 						))}
