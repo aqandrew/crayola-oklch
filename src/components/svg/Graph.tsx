@@ -12,17 +12,15 @@ const graphSize = 100;
 const width = graphSize;
 const height = graphSize;
 const dotSize = 3;
+const cartesianMax = 0.5;
+const xScale = scaleLinear([0, cartesianMax], [0, graphSize]);
+const yScale = scaleLinear([0, cartesianMax], [0, -graphSize]); // flip y axis because SVG's +y is downward
 
 interface GraphProps {
 	colors: ColorName[];
 }
 
 export default function Graph({ colors }: GraphProps) {
-	const cartesianMax =
-		dotSize / graphSize +
-		2 * Math.max(...colors.map((color) => COLORS[color].chroma));
-	const xScale = scaleLinear([0, cartesianMax], [0, graphSize]);
-	const yScale = scaleLinear([0, cartesianMax], [0, -graphSize]); // flip y axis because SVG's +y is downward
 	const colorPlotData = colors.map((color) => {
 		const { chroma, hue } = COLORS[color];
 		const { x, y } = radialToCartesian({

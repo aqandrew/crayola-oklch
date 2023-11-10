@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 'use client';
 
-import { Global, css } from '@emotion/react';
+import { useState } from 'react';
+import { Global } from '@emotion/react';
 
 import {
 	COLORS,
@@ -12,7 +13,14 @@ import {
 import Graph from '@/components/svg/Graph';
 import Swatch from '@/components/Swatch';
 
+const colorOptions = [
+	{ label: 'Original', colorSet: COLORS_ORIGINAL },
+	{ label: 'Proposed', colorSet: COLORS_PROPOSED },
+];
+
 export default function Home() {
+	const [graphColors, setGraphColors] = useState(COLORS_ORIGINAL);
+
 	return (
 		<>
 			<Global
@@ -30,27 +38,29 @@ export default function Home() {
 			<main>
 				<h1>Crayola OKLCH</h1>
 
-				<div css={css({ display: 'flex', gap: '1rem' })}>
-					<div>
-						<Graph colors={COLORS_ORIGINAL} />
+				<fieldset>
+					<legend>Graph colors</legend>
 
-						<h2>Original</h2>
+					{colorOptions.map(({ label, colorSet }) => (
+						<label key={label}>
+							<input
+								type="radio"
+								name="graph-color"
+								checked={graphColors === colorSet}
+								onChange={() => {
+									setGraphColors(colorSet);
+								}}
+							/>
+							{label}
+						</label>
+					))}
+				</fieldset>
 
-						{COLORS_ORIGINAL.map((color) => (
-							<Swatch color={color} key={color} />
-						))}
-					</div>
+				<Graph colors={graphColors} />
 
-					<div>
-						<Graph colors={COLORS_PROPOSED} />
-
-						<h2>Proposed</h2>
-
-						{COLORS_PROPOSED.map((color) => (
-							<Swatch color={color} key={color} />
-						))}
-					</div>
-				</div>
+				{graphColors.map((color) => (
+					<Swatch color={color} key={color} />
+				))}
 			</main>
 		</>
 	);
