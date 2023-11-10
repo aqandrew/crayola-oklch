@@ -44,8 +44,8 @@ export function getOKLCH(color: ColorLCH) {
 export const COLORS: { [K in ColorName]: ColorLCH } = {
 	// original 24-pack
 
-	// #e51027
-	red: { lightness: 58.43, chroma: 0.232, hue: 25.43 },
+	// #ea1a30
+	red: { lightness: 59.74, chroma: 0.232, hue: 24.35 },
 
 	// #fa3035
 	scarlet: { lightness: 63.84, chroma: 0.234, hue: 26.09 },
@@ -71,12 +71,8 @@ export const COLORS: { [K in ColorName]: ColorLCH } = {
 	// #24813a
 	green: { lightness: 53.28, chroma: 0.137, hue: 147.52 },
 
-	// #0070aa
-	'blue-green': {
-		lightness: 52.23,
-		chroma: 0.12382028137144023,
-		hue: 241.9488014959934,
-	},
+	// #0d74ac
+	'blue-green': { lightness: 53.46, chroma: 0.121, hue: 241.15 },
 
 	// #0063be
 	cerulean: {
@@ -95,20 +91,20 @@ export const COLORS: { [K in ColorName]: ColorLCH } = {
 		hue: 256.8281093396693,
 	},
 
-	// #063385
-	indigo: { lightness: 35.22, chroma: 0.145, hue: 261.46 },
+	// #083489
+	indigo: { lightness: 35.86, chroma: 0.149, hue: 261.92 },
 
 	// #112369
-	'blue-violet': { lightness: 29.43, chroma: 0.124, hue: 266.93 },
+	'blue-violet': { lightness: 29.89, chroma: 0.13, hue: 267.41 },
 
 	// #602f76
 	violet: { lightness: 40.26, chroma: 0.124, hue: 314.09 },
 
-	// #9c0048
-	'red-violet': { lightness: 44.59, chroma: 0.179, hue: 4.32 },
+	// #9b014b
+	'red-violet': { lightness: 44.49, chroma: 0.179, hue: 2.57 },
 
-	// #f21b4f
-	'violet-red': { lightness: 61.7, chroma: 0.237, hue: 16.95 },
+	// #ea1a52
+	'violet-red': { lightness: 60.27, chroma: 0.231, hue: 15.13 },
 
 	// additions for proposed 24-pack
 
