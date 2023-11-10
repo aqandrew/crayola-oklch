@@ -28,7 +28,7 @@ export default function Home() {
 			/>
 
 			<main>
-				<h1>Crayola Hues</h1>
+				<h1>Crayola OKLCH</h1>
 
 				<div css={css({ display: 'flex', gap: '1rem' })}>
 					<div>
