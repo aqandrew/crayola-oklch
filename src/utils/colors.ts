@@ -1,6 +1,5 @@
-// hex codes sampled from here with Digital Color Meter
-// https://www.tiktok.com/@color.nerd/video/7283917703314771242?lang=en
-// oklch values obtained from https://oklch.com/
+// oklch values copied from DevTools here:
+// https://www.crayola.com/explore-colors.aspx
 
 export type ColorName =
 	| 'red'
@@ -44,105 +43,91 @@ export function getOKLCH(color: ColorLCH) {
 export const COLORS: { [K in ColorName]: ColorLCH } = {
 	// original 24-pack
 
-	// #e51027
-	red: { lightness: 58.43, chroma: 0.232, hue: 25.43 },
+	// oklch(0.6 0.24 20.12)
+	red: { lightness: 60, chroma: 0.24, hue: 20.12 },
 
-	// #fa3035
-	scarlet: { lightness: 63.84, chroma: 0.234, hue: 26.09 },
+	// oklch(0.63 0.25 23.57)
+	scarlet: { lightness: 63, chroma: 0.25, hue: 23.57 },
 
-	// #e62b29
-	'red-orange': { lightness: 59.85, chroma: 0.221, hue: 27.53 },
+	// oklch(0.66 0.23 28.52)
+	'red-orange': { lightness: 66, chroma: 0.23, hue: 28.52 },
 
-	// #f67727
-	orange: { lightness: 70.72, chroma: 0.178, hue: 47.71 },
+	// oklch(0.7 0.2 41.81)
+	orange: { lightness: 70, chroma: 0.2, hue: 41.81 },
 
-	// #eb8325
-	'yellow-orange': { lightness: 71.07, chroma: 0.161, hue: 56.38 },
+	// oklch(0.81 0.15 69.89)
+	'yellow-orange': { lightness: 81, chroma: 0.15, hue: 69.89 },
 
-	// #dfb612
-	yellow: { lightness: 79, chroma: 0.159, hue: 92.08 },
+	// oklch(0.92 0.14 100.41)
+	yellow: { lightness: 92, chroma: 0.14, hue: 100.41 },
 
-	// #d7ba20
-	'green-yellow': { lightness: 79.07, chroma: 0.156, hue: 97.19 },
+	// oklch(0.92 0.12 103.15)
+	'green-yellow': { lightness: 92, chroma: 0.12, hue: 103.15 },
 
-	// #8cae33
-	'yellow-green': { lightness: 70.2, chroma: 0.152, hue: 123.8 },
+	// oklch(0.87 0.13 121.69)
+	'yellow-green': { lightness: 87, chroma: 0.13, hue: 121.69 },
 
-	// #24813a
-	green: { lightness: 53.28, chroma: 0.137, hue: 147.52 },
+	// oklch(0.63 0.15 158.87)
+	green: { lightness: 63, chroma: 0.15, hue: 158.87 },
 
-	// #0070aa
-	'blue-green': {
-		lightness: 52.23,
-		chroma: 0.12382028137144023,
-		hue: 241.9488014959934,
-	},
+	// oklch(0.62 0.11 220.89)
+	'blue-green': { lightness: 62, chroma: 0.11, hue: 220.89 },
 
-	// #0063be
-	cerulean: {
-		lightness: 50.49,
-		chroma: 0.16262266110737159,
-		hue: 254.35290114509638,
-	},
+	// oklch(0.67 0.13 227.34)
+	cerulean: { lightness: 67, chroma: 0.13, hue: 227.34 },
 
-	// #0052b1
-	blue: { lightness: 45.71, chroma: 0.166, hue: 257.59 },
+	// oklch(0.56 0.24 260.82)
+	blue: { lightness: 56, chroma: 0.24, hue: 260.82 },
 
-	// #003370
-	bluetiful: {
-		lightness: 33.17,
-		chroma: 0.11694152904668356,
-		hue: 256.8281093396693,
-	},
+	// #3c69e7
+	// oklch(56.22% 0.198 265.51)
+	// this is the only color not in Explore Colors
+	// hex value taken from Wikipedia:
+	// https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors
+	// converted to oklch here:
+	// https://oklch.com/
+	bluetiful: { lightness: 56.22, chroma: 0.198, hue: 265.51 },
 
-	// #063385
-	indigo: { lightness: 35.22, chroma: 0.145, hue: 261.46 },
+	// oklch(0.55 0.15 269.34)
+	indigo: { lightness: 55, chroma: 0.15, hue: 269.34 },
 
-	// #112369
-	'blue-violet': { lightness: 29.43, chroma: 0.124, hue: 266.93 },
+	// oklch(0.52 0.15 286.65)
+	'blue-violet': { lightness: 52, chroma: 0.15, hue: 286.65 },
 
-	// #602f76
-	violet: { lightness: 40.26, chroma: 0.124, hue: 314.09 },
+	// oklch(0.54 0.12 309.07)
+	violet: { lightness: 54, chroma: 0.12, hue: 309.07 },
 
-	// #9c0048
-	'red-violet': { lightness: 44.59, chroma: 0.179, hue: 4.32 },
+	// oklch(0.55 0.19 348.1)
+	'red-violet': { lightness: 55, chroma: 0.19, hue: 348.1 },
 
-	// #f21b4f
-	'violet-red': { lightness: 61.7, chroma: 0.237, hue: 16.95 },
+	// oklch(0.67 0.22 1.9)
+	'violet-red': { lightness: 67, chroma: 0.22, hue: 1.9 },
 
 	// additions for proposed 24-pack
 
-	// #e80037
-	'wild-strawberry': {
-		lightness: 58.82,
-		chroma: 0.23674007941731795,
-		hue: 21.429836265688046,
-	},
+	// oklch(0.67 0.25 356.41)
+	'wild-strawberry': { lightness: 67, chroma: 0.25, hue: 356.41 },
 
-	// #fa4839
-	bittersweet: { lightness: 65.76, chroma: 0.217, hue: 29.1 },
+	// oklch(0.71 0.18 29.08)
+	bittersweet: { lightness: 71, chroma: 0.18, hue: 29.08 },
 
-	// #eba324
-	'banana-mania': { lightness: 76.68, chroma: 0.153, hue: 75.07 },
+	// oklch(0.93 0.07 89.77)
+	'banana-mania': { lightness: 93, chroma: 0.07, hue: 89.77 },
 
-	// #7baa75
-	'granny-smith': { lightness: 69.04, chroma: 0.091, hue: 141.75 },
+	// oklch(0.84 0.12 141.27)
+	'granny-smith': { lightness: 84, chroma: 0.12, hue: 141.27 },
 
-	// #11847c
-	'jungle-green': { lightness: 55.4, chroma: 0.093, hue: 187.2 },
+	// oklch(0.66 0.12 169.37)
+	'jungle-green': { lightness: 66, chroma: 0.12, hue: 169.37 },
 
-	// #007d9a
-	'robins-egg': {
-		lightness: 54.64,
-		chroma: 0.10062293895614662,
-		hue: 221.56836171458156,
-	},
+	// oklch(0.77 0.13 194.77)
+	'robins-egg': { lightness: 77, chroma: 0.13, hue: 194.77 },
 
-	// #452871
-	'royal-purple': { lightness: 35.44, chroma: 0.121, hue: 298.29 },
+	// oklch(0.47 0.15 301.71)
+	'royal-purple': { lightness: 47, chroma: 0.15, hue: 301.71 },
 
-	// #672162
-	plum: { lightness: 38.17, chroma: 0.13, hue: 330.74 },
+	// oklch(0.46 0.14 333.21)
+	plum: { lightness: 46, chroma: 0.14, hue: 333.21 },
 };
 
 export const COLORS_ORIGINAL = (Object.keys(COLORS) as ColorName[]).slice(

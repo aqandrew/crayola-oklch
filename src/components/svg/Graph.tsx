@@ -11,7 +11,7 @@ const containerSize = '400px';
 const graphSize = 100;
 const width = graphSize;
 const height = graphSize;
-const chromaMax = 0.5;
+const chromaMax = 0.55;
 const xScale = scaleLinear([0, chromaMax], [0, graphSize]);
 const yScale = scaleLinear([0, chromaMax], [0, -graphSize]); // flip y axis because SVG's +y is downward
 
