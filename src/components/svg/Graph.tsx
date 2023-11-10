@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { scaleLinear } from 'd3';
+import { AnimatePresence } from 'framer-motion';
 
 import { COLORS, ColorName } from '@/utils/colors';
 import AxisX from './AxisX';
@@ -43,7 +44,9 @@ export default function Graph({ colors }: GraphProps) {
 
 				{colorPlotData.map(({ color, x, y }) => {
 					return (
-						<SwatchDot color={color} key={color} cx={x} cy={y} r={dotSize} />
+						<AnimatePresence key={color}>
+							<SwatchDot color={color} cx={x} cy={y} r={dotSize} />
+						</AnimatePresence>
 					);
 				})}
 			</svg>

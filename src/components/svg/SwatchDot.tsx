@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import { ColorName, getCSSVariable } from '@/utils/colors';
 
 interface SwatchProps {
@@ -9,7 +11,7 @@ interface SwatchProps {
 
 export default function Swatch({ color, cx = 0, cy = 0, r }: SwatchProps) {
 	return (
-		<circle
+		<motion.circle
 			cx={cx}
 			cy={cy}
 			r={r}
@@ -17,6 +19,9 @@ export default function Swatch({ color, cx = 0, cy = 0, r }: SwatchProps) {
 				{ '--color-swatch-dot': getCSSVariable(color) } as React.CSSProperties
 			}
 			fill="var(--color-swatch-dot)"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
 		/>
 	);
 }
