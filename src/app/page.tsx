@@ -35,12 +35,13 @@ export default function Home() {
 				}}
 			/>
 
-			<main>
+			<header>
 				<h1>Crayola OKLCH</h1>
+
+				<p>TODO some informational text</p>
 
 				<fieldset>
 					<legend>Graph colors</legend>
-
 					{colorOptions.map(({ label, colorSet }) => (
 						<label key={label}>
 							<input
@@ -55,12 +56,18 @@ export default function Home() {
 						</label>
 					))}
 				</fieldset>
+			</header>
 
+			<main>
 				<Graph colors={graphColors} />
 
-				{graphColors.map((color) => (
-					<Swatch color={color} key={color} />
-				))}
+				<ol>
+					{graphColors.map((color) => (
+						<li key={color}>
+							<Swatch color={color} />
+						</li>
+					))}
+				</ol>
 			</main>
 		</>
 	);

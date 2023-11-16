@@ -1,0 +1,15 @@
+body {
+	margin-inline: 2rem;
+}
+
+main {
+	--container-gap: 2rem;
+
+	display: flex;
+	gap: var(--container-gap);
+	margin-block-start: var(--container-gap);
+
+	@media (max-width: 45rem) {
+		flex-direction: column;
+	}
+}

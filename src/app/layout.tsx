@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { GeistMono } from 'geist/font/mono';
 
+import './reset.css';
+import './globals.css';
+
 export const metadata: Metadata = {
 	title: 'Crayola OKLCH',
 	description: 'An exploration of OKLCH color space',

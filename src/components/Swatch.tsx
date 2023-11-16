@@ -15,10 +15,12 @@ export default function Swatch({ color }: SwatchProps) {
 				display: 'flex',
 				gap: '1rem',
 				alignItems: 'center',
+				marginBlock: '0.25rem',
+				marginInline: 0,
 
 				'&::before': {
 					content: '""',
-					width: '2rem',
+					width: '1.5rem',
 					aspectRatio: 1,
 					outline: '1px solid black',
 					backgroundColor: 'var(--color-swatch)',
