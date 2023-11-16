@@ -7,11 +7,15 @@ import { COLORS, ColorName } from '@/utils/colors';
 import AxisX from './AxisX';
 import AxisY from './AxisY';
 import SwatchDot from './SwatchDot';
+import GridLines from './GridLines';
 
 const containerSize = '400px';
 const graphSize = 100;
 const width = graphSize;
 const height = graphSize;
+const gridLineWidth = 0.5;
+const viewBoxOrigin = -(width + gridLineWidth) / 2;
+const viewBoxTotalSize = width + gridLineWidth;
 const dotSize = 3;
 const cartesianMax = 0.5;
 const xScale = scaleLinear([0, cartesianMax], [0, graphSize]);
@@ -38,7 +42,10 @@ export default function Graph({ colors }: GraphProps) {
 
 	return (
 		<div css={css({ width: containerSize, height: containerSize })}>
-			<svg viewBox={`${-width / 2} ${-height / 2} ${width} ${height}`}>
+			<svg
+				viewBox={`${viewBoxOrigin} ${viewBoxOrigin} ${viewBoxTotalSize} ${viewBoxTotalSize}`}
+			>
+				<GridLines graphSize={graphSize} gridLineWidth={gridLineWidth} />
 				<AxisX width={width} />
 				<AxisY height={height} />
 
