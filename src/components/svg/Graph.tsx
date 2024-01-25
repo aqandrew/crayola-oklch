@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import { COLORS, ColorName } from '@/utils/colors';
 import AxisX from './AxisX';
 import AxisY from './AxisY';
-import SwatchDot from './SwatchDot';
+import Swatch from './Swatch';
 import GridLines from './GridLines';
 
 const containerSize = '400px';
@@ -52,7 +52,7 @@ export default function Graph({ colors }: GraphProps) {
 				{colorPlotData.map(({ color, x, y }) => {
 					return (
 						<AnimatePresence key={color}>
-							<SwatchDot color={color} cx={x} cy={y} r={dotSize} />
+							<Swatch color={color} cx={x} cy={y} r={dotSize} />
 						</AnimatePresence>
 					);
 				})}

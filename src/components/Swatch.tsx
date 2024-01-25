@@ -13,7 +13,7 @@ export default function Swatch({ color }: SwatchProps) {
 			style={{ '--color-swatch': getCSSVariable(color) } as React.CSSProperties}
 			css={css({
 				display: 'flex',
-				gap: '1rem',
+				gap: '0.5rem',
 				alignItems: 'center',
 				marginBlock: '0.25rem',
 				marginInline: 0,
@@ -22,7 +22,7 @@ export default function Swatch({ color }: SwatchProps) {
 					content: '""',
 					width: '1.5rem',
 					aspectRatio: 1,
-					outline: '1px solid black',
+					borderRadius: '50%',
 					backgroundColor: 'var(--color-swatch)',
 				},
 			})}
