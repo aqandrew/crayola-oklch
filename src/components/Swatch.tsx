@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 import { ColorName, getCSSVariable } from '@/utils/colors';
 
@@ -9,25 +8,25 @@ interface SwatchProps {
 
 export default function Swatch({ color }: SwatchProps) {
 	return (
-		<figure
-			style={{ '--color-swatch': getCSSVariable(color) } as React.CSSProperties}
-			css={css({
-				display: 'flex',
-				gap: '0.5rem',
-				alignItems: 'center',
-				marginBlock: '0.25rem',
-				marginInline: 0,
-
-				'&::before': {
-					content: '""',
-					width: '1.5rem',
-					aspectRatio: 1,
-					borderRadius: '50%',
-					backgroundColor: 'var(--color-swatch)',
-				},
-			})}
-		>
+		<Figure color={color}>
 			<figcaption>{color.replace('-', ' ')}</figcaption>
-		</figure>
+		</Figure>
 	);
 }
+
+const Figure = styled.figure`
+	--color-swatch: ${({ color }) => getCSSVariable(color as ColorName)};
+
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	margin: 0.25rem 0;
+
+	&::before {
+		content: '';
+		width: 1.5rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: var(--color-swatch);
+	}
+`;

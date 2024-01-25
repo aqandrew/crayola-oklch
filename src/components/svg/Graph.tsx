@@ -1,6 +1,5 @@
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import { scaleLinear } from 'd3';
+import styled from '@emotion/styled';
 import { AnimatePresence } from 'framer-motion';
 
 import { COLORS, ColorName } from '@/utils/colors';
@@ -41,7 +40,7 @@ export default function Graph({ colors }: GraphProps) {
 	});
 
 	return (
-		<div css={css({ width: containerSize, height: containerSize })}>
+		<GraphContainer>
 			<svg
 				viewBox={`${viewBoxOrigin} ${viewBoxOrigin} ${viewBoxTotalSize} ${viewBoxTotalSize}`}
 			>
@@ -57,9 +56,14 @@ export default function Graph({ colors }: GraphProps) {
 					);
 				})}
 			</svg>
-		</div>
+		</GraphContainer>
 	);
 }
+
+const GraphContainer = styled.div`
+	width: ${containerSize};
+	aspect-ratio: 1;
+`;
 
 function radialToCartesian({ r, theta }: { r: number; theta: number }) {
 	return {
